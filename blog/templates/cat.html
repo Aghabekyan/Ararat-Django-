@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Cat{% endblock %}
+
+{% block main_left %}
+<div class="mainLeft">
+	<div class="mainNews">
+		<div class="titler">
+			<a href="">
+				{{category.name}}
+			</a>
+		</div>
+		<br />
+		{% for item in data %}
+		<div class="mainNewsUnit">
+			<a href="/article/{{item.id}}" class="mainNewsUnitLink">
+				<b>{{item.title}}</b>
+				<span>
+					<img src="{{item.img.url}}">
+					{{item.desc}}
+				</span>
+			</a>
+			<div class="mainNewsUnitFoot">
+				<span>Дата: <a>{{item.pub_date|date:"d/m/Y"}}</a></span>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

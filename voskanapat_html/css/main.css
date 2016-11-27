@@ -1,0 +1,1022 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+/* Suro Start */
+
+
+
+
+/* Generated by Font Squirrel (https://www.fontsquirrel.com) on April 27, 2016 */
+
+
+
+@font-face {
+    font-family: 'ghea_grapalatbold';
+    src: url('../grapalat/gheagpalatbld_0.eot');
+    src: url('../grapalat/gheagpalatbld_0.eot?#iefix') format('embedded-opentype'),
+         url('../grapalat/gheagpalatbld_0.woff2') format('woff2'),
+         url('../grapalat/gheagpalatbld_0.woff') format('woff'),
+         url('../grapalat/gheagpalatbld_0.ttf') format('truetype'),
+         url('../grapalat/gheagpalatbld_0.svg#ghea_grapalatbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ghea_grapalatbold_italic';
+    src: url('../grapalat/gheagrapalatblit_0.eot');
+    src: url('../grapalat/gheagrapalatblit_0.eot?#iefix') format('embedded-opentype'),
+         url('../grapalat/gheagrapalatblit_0.woff2') format('woff2'),
+         url('../grapalat/gheagrapalatblit_0.woff') format('woff'),
+         url('../grapalat/gheagrapalatblit_0.ttf') format('truetype'),
+         url('../grapalat/gheagrapalatblit_0.svg#ghea_grapalatbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ghea_grapalatitalic';
+    src: url('../grapalat/gheagrapalatrit_0.eot');
+    src: url('../grapalat/gheagrapalatrit_0.eot?#iefix') format('embedded-opentype'),
+         url('../grapalat/gheagrapalatrit_0.woff2') format('woff2'),
+         url('../grapalat/gheagrapalatrit_0.woff') format('woff'),
+         url('../grapalat/gheagrapalatrit_0.ttf') format('truetype'),
+         url('../grapalat/gheagrapalatrit_0.svg#ghea_grapalatitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ghea_grapalatregular';
+    src: url('../grapalat/gheagrpalatreg_0.eot');
+    src: url('../grapalat/gheagrpalatreg_0.eot?#iefix') format('embedded-opentype'),
+         url('../grapalat/gheagrpalatreg_0.woff2') format('woff2'),
+         url('../grapalat/gheagrpalatreg_0.woff') format('woff'),
+         url('../grapalat/gheagrpalatreg_0.ttf') format('truetype'),
+         url('../grapalat/gheagrpalatreg_0.svg#ghea_grapalatregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'ghea_grapalatregular';
+}
+
+
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+	height:10px;
+	background-color:#ffffff;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #000; 
+	background-image:url(../img/scroll.png);
+	background-position:center;
+	background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: #000; 
+	background-image:url(../img/scroll.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+
+header{
+	border-bottom:34px solid black;
+	height:90px;
+}
+.realHeader{
+	height:124px;
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+.headerTop{
+	height:90px;
+	position:relative;
+}
+.logo{
+	position:absolute;
+	height:110px;
+	float:left;
+	top:10px;
+}
+.logo a, .logo img{
+	display:block;
+	height:110px;
+	width:530px;
+}
+.searchBox{
+	float: right;
+    height: 34px;
+    margin-top: 50px;
+    border: 1px solid #000;
+    border-radius: 3px;
+	overflow:hidden;
+}
+.search{
+    display: block;
+    float: left;
+    height: 34px;
+    padding: 0 10px;
+    margin: 0;
+    border: none;
+    outline: none;
+    width: 286px;
+}
+.ssubmit{
+    display: block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 34px;
+    height: 34px;
+    background-image: url(../img/sbut.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.menu{
+	height: 34px;
+    float: right;
+    position: relative;
+    z-index: 99999999;
+}
+.menu a{
+    display: block;
+    height: 34px;
+    float: left;
+    text-decoration: none;
+    color: white;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.menu a:hover{
+    background: white !important;
+    color: black !important;
+}
+.mobiMenu{
+	display:none;
+}
+.main{
+	width:1200px;
+	min-height:600px;
+	margin:10px auto;
+}
+.mainLeft{
+	width:600px;
+	float:left;
+	min-height:700px;
+	background-color:white;
+}
+.mainNewsUnit{
+	margin-bottom:10px;
+}
+.mainNewsUnitLink{
+	display:block;
+	text-decoration:none;
+}
+.mainNewsUnitLink b{
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'ghea_grapalatbold';
+    line-height: 24px;
+    padding-bottom: 5px;
+}
+.mainNewsUnitLink span{
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+	height:110px;
+	overflow:hidden;
+	text-align:justify;
+}
+.mainNewsUnitLink span img{
+    display: block;
+	float:left;
+	margin-right:10px;
+	height:110px;
+	width:165px;
+}
+.mainNewsUnitFoot{
+	background-color:silver;
+	height:24px;
+	padding:0 8px;
+	margin-top:5px;
+	border-radius: 3px;
+}
+.mainNewsUnitFoot span{
+	color:#000;
+	text-shadow:1px 1px 0 rgba(255, 255, 255, 0.40);
+	display:block;
+	float:left;
+	margin-right:10px;
+	line-height:24px;
+	font-size:14px;
+}
+.mainNewsUnitFoot span a{
+	color:#000;
+    font-family: 'ghea_grapalatbold';
+}
+.titler{
+}
+.titler a{
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'ghea_grapalatbold';
+    border-bottom: 2px solid black;
+}
+.videoOnMain a{
+	display: block;
+	float:left;
+    position: relative;
+    width: 295px;
+    height: 260px;
+    text-decoration: none;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.videoOnMain a:first-child{
+    width: 600px;
+    height: 400px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.videoOnMain a:nth-child(2n){
+    margin-left: 0;
+}
+.videoOnMain a:first-child img{
+    width: 600px;
+    height: 400px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.videoOnMain a:first-child span{
+	padding:10px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	color:white;
+	font-size:18px;
+	line-height:22px;
+	background-color:rgba(0,0,0,0.5);
+    font-family: 'ghea_grapalatbold';
+	height: auto;
+}
+.videoOnMain a:first-child .playBut {
+    top: 160px;
+}
+.videoOnMain a img{
+	display:block;
+	width:295px;
+	height:197px;
+}
+.videoOnMain a span{
+	display:block;
+	font-size:16px;
+	line-height:19px;
+	height:57px;
+	overflow:hidden;
+	margin-top:6px;
+	color:#000;
+}
+.playBut{
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/play.png);
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -40px;
+}
+.mainCenter{
+	width:300px;
+	float:left;
+	min-height:700px;
+	background-color:white;
+	margin:0 20px;
+}
+.timeline{
+	height:900px;
+	overflow:auto;
+	margin-bottom:20px;
+	border-bottom:2px solid black;
+}
+.timelineEditor{
+	height:600px;
+}
+.timelinePopular{
+	height:auto !important;
+	overflow:auto !important;
+	border-bottom:none !important;
+}
+.timelinePopular a img{
+	width:60px;
+	height:60px;
+}
+.timeline::-webkit-scrollbar {
+    width: 6px;
+}
+.timeline a{
+	display:block;
+	font-size:16px;
+	line-height:20px;
+	color:#000;
+	text-decoration:none;
+	margin-bottom:10px;
+	padding:10px;
+	border-bottom:1px solid silver;
+}
+.timelineImportant{
+    font-family: 'ghea_grapalatbold';
+}
+.timeline a:last-child{
+	border-bottom:none;
+}
+.timeline a img{
+	display:block;
+	float:left;
+	margin-right:8px;
+}
+.timeline a time{
+	display:inline-block;
+	color: white;
+	padding:0 7px;
+	font-size:12px !important;
+	height:20px;
+	background-color:#00ADED;
+	margin-right:5px;
+}
+.timelineEditor a time{
+	background-color:#f00 !important;
+}
+.timeline span{
+    display: block;
+    border-bottom: 1px solid silver;
+    margin: 5px 0;
+    padding: 10px;
+    font-family: 'ghea_grapalatbold';
+}
+.mainRight{
+	width:260px;
+	float:left;
+	min-height:700px;
+	background-color:white;
+}
+.dayTitle{
+    font-family: 'ghea_grapalatbold';
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+}
+.dayTitle span{
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-family: 'ghea_grapalatbold_italic';
+    font-size: 14px;
+}
+.dayTitle img{
+	display:inline-block;
+	height: 22px;
+}
+.projectList a{
+	display:block;
+	margin-top:10px;
+}
+.projectList a img{
+	display:block;
+	width:100%;
+}
+
+
+footer{
+	width:1200px;
+	background-color:black;
+	margin:10px auto;
+	border-radius:5px;
+}
+.footerLinks{
+	height:34px;
+	text-align:center;
+}
+.footerLinks a{
+	display:inline-block;
+	height:34px;
+	line-height:34px;
+	font-size:14px;
+	color:white;
+	padding:0 15px
+}
+footer small{
+	display:block;
+	color:white;
+	text-align:center;
+	margin:20px 0;
+}
+
+
+
+
+/* Article Show */
+
+.news{
+	padding:10px;
+}
+.news h1{
+	padding:0;
+	margin:0;
+	margin-bottom:10px;
+}
+.news time{
+	font-size:12px;
+	line-height:12px;
+	margin-bottom:5px;
+	color:gray;
+}
+.recomendBox{
+	margin-bottom:10px;
+}
+.recomendBoxUnit{
+	width:221px;
+	float:left;
+	overflow:hidden;
+	margin-right:10px;
+}
+.news p{
+	padding:10px 0;
+	margin:0;
+	text-align:justify;
+}
+.articleImge{
+	margin-bottom:10px;
+	padding-bottom:10px;
+	border-bottom:2px solid whitesmoke;
+}
+.articleImge img{
+	display:block;
+	width:600px;
+}
+.articleVideo { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	padding-top: 30px; 
+	height: 0; 
+	overflow: hidden; 
+} 
+.articleVideo iframe, .articleVideo object, .articleVideo embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%;
+	height: 100%; 
+}
+.articleInner{
+	float:right;
+	width:241px;
+}
+.suggestions{
+	width:219px;
+	min-height:50px;
+	border: 1px solid #E4E4E4;
+	background-color:whitesmoke;
+	padding-left:10px;
+	margin:10px;
+	margin-right:0;
+}
+.suggestions ul{
+	margin:0;
+	padding:0;
+	list-style-image:url(../img/li.png);
+	margin-left: 13px;
+}
+.suggestions h4{
+	margin:0;
+	padding:0;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding-bottom:5px;
+	border-bottom: 1px solid #E4E4E4;
+	width:211px;
+}
+.suggestions li{
+	margin:0;
+	padding:0;
+}
+.suggestions a{
+	display:block;
+	color:#333333;
+	text-shadow:1px 1px 0 white;
+	text-decoration:none;
+	margin-bottom:5px;
+	font-size:14px;
+}
+.suggestions a:hover{
+	text-decoration:underline;
+}
+.followAuthor{
+	width:220px;
+	float:left;
+}
+.followAuthorUnit{
+	width:220px;
+	height:22px;
+	margin-top:10px;
+	float:left;
+}
+.articleShaher{
+	padding:5px 10px;
+	border-top:1px solid whitesmoke;
+	border-bottom:1px solid whitesmoke;
+}
+.articleComments{
+	padding:10px;
+}
+.yashare-auto-init{
+	float:right;
+}
+
+
+
+@media(max-width:1200px){
+	header{
+	}
+	.realHeader {
+		width: 1000px;
+	}
+	.menu a {
+		font-size: 14px;
+	}
+	.main{
+		width:1000px;
+	}
+	.mainLeft{
+		width:530px;
+	}
+	.videoOnMain a{
+		width: 260px;
+		height: 236px;
+	}
+	.videoOnMain a .playBut {
+		top: 46px;
+	}
+	.videoOnMain a img {
+		width: 260px;
+		height: 173px;
+	}
+	.videoOnMain a:first-child{
+		width: 530px;
+		height: 350px;
+	}
+	.videoOnMain a:first-child img {
+		width: 530px;
+		height: 350px;
+	}
+	.videoOnMain a:first-child .playBut {
+		top: 135px;
+	}
+	.mainCenter{
+		width: 250px;
+		margin: 0 10px;
+	}
+	.mainRight {
+		width: 200px;
+	}
+	.dayTitle {
+		font-size: 14px;
+	}
+	.dayTitle span{
+		font-size:13px;
+	}
+	footer{
+		width:1000px;
+	}
+}
+
+@media(max-width:480px){
+	header{
+		height:56px;
+		border-bottom: 19px solid black;
+	}
+	.headerTop {
+		height: 56px;
+	}
+	.logo{
+		height: 62px;
+		width: 300px;
+	}
+	.logo a, .logo img {
+		height: 62px;
+		width: 300px;
+	}
+	.realHeader {
+	    height: 56px;
+		width: 300px;
+	}
+	.searchBox{
+		display:none;
+	}
+	.menu{
+		display:none;
+	}
+	.mobiMenu{
+		display: block;
+		width: 30px;
+		height: 31px;
+		position: absolute;
+		background-color: whitesmoke;
+		top: 56px;
+		right: 0;
+		z-index: 99999999999;
+	}
+	.mobiMenuBut{
+		width:30px;
+		height:31px;
+		background-image:url(../img/mobimenu.png);
+	}
+	.menuBox{
+		width:300px;
+		position:absolute;
+		background-color:whitesmoke;
+		right:0;
+		top:31px;
+		padding:5px 0;
+		display:none;
+	}
+	.menuBox a{
+		display: block;
+		text-align: center;
+		height: 30px;
+		line-height: 30px;
+		text-decoration: none;
+		color: #000;
+		text-shadow: 1px 1px 0 white;
+	}
+	.main{
+		width:300px;
+	}
+	.mainLeft{
+		width:300px;
+	}
+	.mainNewsUnitLink span {
+		line-height: 18px;
+		height: 380px;
+	}
+	.mainNewsUnitLink span img {
+		width: 300px;
+		height: 200px;
+	}
+	.mainNewsUnitFoot span {
+		font-size:11px;
+	}
+	.videoOnMain a{
+		width: 300px;
+		height: 263px;
+		margin:0;
+	}
+	.videoOnMain a .playBut {
+		top: 60px;
+	}
+	.videoOnMain a img {
+		width: 300px;
+		height: 200px;
+	}
+	.videoOnMain a:first-child{
+		width: 300px;
+		height: 200px;
+	}
+	.videoOnMain a:first-child img {
+		width: 300px;
+		height: 200px;
+	}
+	.videoOnMain a:first-child span {
+		font-size: 16px;
+		padding:5px;
+	}
+	.videoOnMain a:first-child .playBut {
+		top: 60px;
+	}
+	.mainCenter{
+		width: 300px;
+		margin:10px 0;
+	}
+	.mainRight {
+		width: 300px;
+		margin:10px 0;
+	}
+	.dayTitle {
+		font-size: 14px;
+	}
+	.dayTitle span{
+		font-size:13px;
+	}
+	footer{
+		width:300px;
+	}
+	.footerLinks {
+		height: auto;
+	}
+	.news h1 {
+		font-size:20px;
+	}
+}

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'blog',
 )
 
@@ -54,7 +55,9 @@ ROOT_URLCONF = 'voskanapat.urls'
 
 WSGI_APPLICATION = 'voskanapat.wsgi.application'
 
-
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+]
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 

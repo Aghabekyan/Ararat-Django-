@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
     def __unicode__(self):
-    	return self.name
-
+        return self.name
 
     class Meta:
         verbose_name = 'Category'
@@ -19,19 +19,14 @@ class Content(models.Model):
     img = models.ImageField(upload_to='img')
     video = models.CharField(max_length=200)
     general = models.BooleanField(default=False)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('date published', blank=True, null=True)
     create_date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User)
-    category = models.ManyToManyField('Category')
+    category = models.ManyToManyField('Category', blank=True, null=True)
 
     def __unicode__(self):
-    	return self.title
-
+        return self.title
 
     class Meta:
         verbose_name = 'Content'
         verbose_name_plural = "Contents"
-
-
-
-

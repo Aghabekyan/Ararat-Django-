@@ -27,16 +27,16 @@
 		{% endfor %}
 <div class="pagination">
     <span class="step-links">
-        {% if contacts.has_previous %}
-            <a href="?page={{ contacts.previous_page_number }}">previous</a>
+        {% if data.has_previous %}
+            <a href="?page={{ data.previous_page_number }}">previous</a>
         {% endif %}
 
         <span class="current">
-            Page {{ contacts.number }} of {{ contacts.paginator.num_pages }}.
+            Page {{ data.number }} of {{ data.paginator.num_pages }}.
         </span>
 
-        {% if contacts.has_next %}
-            <a href="?page={{ contacts.next_page_number }}">next</a>
+        {% if data.has_next %}
+            <a href="?page={{ data.next_page_number }}">next</a>
         {% endif %}
     </span>
 </div>

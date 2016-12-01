@@ -18,18 +18,18 @@ def index(request):
 def category(request, cat_id):
     data = Content.objects.filter(category=cat_id)
     category = Category.objects.get(pk=cat_id)
-    paginator = Paginator(data, 25) # Show 25 contacts per page
+    paginator = Paginator(data, 25) # Show 25 news per page
     page = request.GET.get('page')
     try:
-        contacts = paginator.page(page)
+        data = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer, deliver first page.
-        contacts = paginator.page(1)
+        data = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        contacts = paginator.page(paginator.num_pages)
+        data = paginator.page(paginator.num_pages)
     print data
-    return render_to_response('cat.html', {'data': contacts, 'category': category, 'contacts': contacts})
+    return render_to_response('cat.html', {'data': data, 'category': category})
 
 
 def article(request, article_id):

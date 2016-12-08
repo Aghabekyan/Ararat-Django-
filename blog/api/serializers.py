@@ -2,6 +2,18 @@ from rest_framework import serializers
 from blog.models import *
 
 
+print repr(serializers.ModelSerializer)
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
+    name = serializers.CharField(required=False, allow_blank=True, max_length=100)
+
+    class Meta:
+        model = Category
+        fields = ('id', 'name')
+
+
 class ContentSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     title = serializers.CharField(required=False, allow_blank=True, max_length=100)
@@ -12,9 +24,10 @@ class ContentSerializer(serializers.ModelSerializer):
     pub_date = serializers.DateTimeField()
     create_date = serializers.DateTimeField()
     user_id = serializers.IntegerField(read_only=True)
-    category_id = serializers.IntegerField(read_only=True)
+    category = CategorySerializer(many=True)
+    # category_id = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Content
         fields = ('id', 'title', 'desc', 'img', 'video', 'general', 'pub_date', 'create_date',
-                  'user_id', 'category_id')
+                  'user_id', 'category')

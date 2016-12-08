@@ -10,36 +10,8 @@
 				{{category.name}}
 			</a>
 		</div>
-		<br />
-		{% for item in data %}
-		<div class="mainNewsUnit">
-			<a href="/article/{{item.id}}" class="mainNewsUnitLink">
-				<b>{{item.title}}</b>
-				<span>
-					<img src="{{item.img.url}}">
-					{{item.desc}}
-				</span>
-			</a>
-			<div class="mainNewsUnitFoot">
-				<span>Дата: <a>{{item.pub_date|date:"d/m/Y"}}</a></span>
-			</div>
-		</div>
-		{% endfor %}
-<div class="pagination">
-    <span class="step-links">
-        {% if data.has_previous %}
-            <a href="?page={{ data.previous_page_number }}">previous</a>
-        {% endif %}
+		
 
-        <span class="current">
-            Page {{ data.number }} of {{ data.paginator.num_pages }}.
-        </span>
-
-        {% if data.has_next %}
-            <a href="?page={{ data.next_page_number }}">next</a>
-        {% endif %}
-    </span>
-</div>
 	</div>
 </div>
 {% endblock %}

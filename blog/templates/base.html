@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<nav class="menu">
-					<a href="/category/4/">СТАТЬИ</a>
+					<a href="{% url 'category' 4 %}">СТАТЬИ</a>
 					<a href="/category/5/">АНАЛИТИКА</a>
 					<a href="/category/6/">КОММЕНТАРИИ</a>
 					<a href="/category/7/">ИНТЕРВЬЮ</a>
@@ -52,7 +52,7 @@
 				<div class="mobiMenu">
 					<div class="mobiMenuBut"></div>
 					<nav class="menuBox">
-						<a href="#">Статьи</a>
+						<a href="{% url 'category' 4 %}">Статьи</a>
 						<a href="#">Аналитика</a>
 						<a href="#">Комментарии</a>
 						<a href="#">Интервью</a>
@@ -298,11 +298,37 @@
 				2010 - 2016 © Все права защищены. При использовании материалов Voskanapat.info ссылка обязательна. Мнение автора публикации может не совпадать с позицией редакции. Ответственность за содержание рекламы несут рекламодатели.
 			</small>
 		</footer>
-		
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="{% static "js/plugins.js" %}"></script>
-        <script src="{% static "js/main.js" %}"></script>
+
+		<script id="contentTemplate" type="text/template">
+			<a data-id="<%= id %>" class="mainNewsUnitLink">
+				<b><%= title %></b>
+				<span>
+					<img src="<%= img %>">
+					<%= desc %>
+				</span>
+			</a>
+			<div class="mainNewsUnitFoot">
+				<span>Дата: <a><%= date %></a></span>
+			</div>
+		</script>	
+		<script id="contentShow" type="text/template">
+			<article class="news">
+				<time><%= date %></time>
+				<h1><%= title %></h1>
+				<%= desc %>
+				<iframe width="580" height="315" src="//www.youtube.com/embed/<%= video %>" frameborder="0" allowfullscreen=""></iframe>
+			</article>
+		</script>		
+        <script src="{% static "js/lib/jquery.min.js" %}"></script>
+        <script src="{% static "js/lib/handlebars-v4.0.5.js" %}"></script>
+        <script src="{% static "js/lib/underscore.js" %}"></script>
+        <script src="{% static "js/lib/backbone.js" %}"></script>
+		<script src="{% static "js/models/content.js" %}"></script>
+		<script src="{% static "js/collections/contents.js" %}"></script>
+		<script src="{% static "js/views/content.js" %}"></script>
+		<script src="{% static "js/views/contents.js" %}"></script>
+        <script src="{% static "js/router.js" %}"></script>
+        <script src="{% static "js/app.js" %}"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

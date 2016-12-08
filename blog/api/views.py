@@ -7,7 +7,7 @@ from blog.api.serializers import *
 class ContentViewSet(viewsets.ViewSet):
 
     def list(self, request):
-        queryset = Content.objects.all()
+        queryset = Content.objects.order_by('-id').all()[:25]
         serializer = ContentSerializer(queryset, many=True)
         return Response(serializer.data)
 

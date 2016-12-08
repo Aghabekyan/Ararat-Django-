@@ -16,20 +16,8 @@ def index(request):
 
 
 def category(request, cat_id):
-    data = Content.objects.filter(category=cat_id)
     category = Category.objects.get(pk=cat_id)
-    paginator = Paginator(data, 25) # Show 25 news per page
-    page = request.GET.get('page')
-    try:
-        data = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        data = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        data = paginator.page(paginator.num_pages)
-    print data
-    return render_to_response('cat.html', {'data': data, 'category': category})
+    return render_to_response('cat.html', {'category': category})
 
 
 def article(request, article_id):

@@ -2,12 +2,13 @@
 var app = app || {};
 
 $(function() {
-	var contents = [{"id":2, "title": "aaaaaaaaaaaaaaaaaa"},
-					{"id":3, "title": "bbbbbbbbbbbbbbbbbb"},
-					{"id":4, "title": "cccccccccccccccccc"},
-					{"title": "cccccccccccccccccc"},
-	];
-	new app.ContentsView( contents );
+	// var contents = [{"id":2, "title": "aaaaaaaaaaaaaaaaaa"},
+	// 				{"id":3, "title": "bbbbbbbbbbbbbbbbbb"},
+	// 				{"id":4, "title": "cccccccccccccccccc"},
+	// 				{"title": "cccccccccccccccccc"},
+	// ];
+	// new app.ContentsView( contents );
+	new app.HeaderView();
 });
 
 

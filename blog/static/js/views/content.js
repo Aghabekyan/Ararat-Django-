@@ -19,7 +19,6 @@ app.ContentView = Backbone.View.extend({
 		var content = new app.Content({"id": id});
 		content.fetch({
 		    success: function (model) {
-		        // console.log(JSON.stringify(model));
 		        console.log(model);
 		        var contentShowView = new app.ContentShowView({
 					model: model
@@ -29,14 +28,7 @@ app.ContentView = Backbone.View.extend({
 	},
 
 	render: function() {
-		// tmpl – это функция, которая принимает JSON-объект и возвращает html
-		// мы определили this.el в tagName. Используйте $el для доступа
-		// к jQuery-функции html()
-		// console.log(this.model)
-		// console.log(this.model.toJSON())
 		this.$el.html( this.template( this.model.toJSON() ));
-		// console.log(this.$el);
-		// $('.mainNews').empty().append(this.$el);
 		return this;
 	}
 });
@@ -52,14 +44,8 @@ app.ContentShowView = Backbone.View.extend({
     },
 
 	render: function() {
-		// tmpl – это функция, которая принимает JSON-объект и возвращает html
-		// мы определили this.el в tagName. Используйте $el для доступа
-		// к jQuery-функции html()
-		// console.log(this.model)
-		// console.log(this.model.toJSON())
 		this.$el.html( this.template( this.model.toJSON() ));
-		// console.log(this.$el);
-		$('.mainLeft').empty().append(this.$el);
+		$('.mainNews').empty().append(this.$el);
 		return this;
 	}
 });

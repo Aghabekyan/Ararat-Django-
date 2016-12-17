@@ -26,45 +26,8 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 			
-		<header class="clearfix">	
-			<div class="realHeader">
-				<div class="headerTop clearfix">
-					<div class="logo">
-						<a href="/">
-							<img src="{% static 'img/logo.png' %}">
-						</a>
-					</div>
-					<div class="searchBox clearfix">
-						<form action="/?l=am" method="get">
-							<input type="search" class="search" placeholder="поиск" name="s" value="" />
-							<input type="submit" value="" class="ssubmit" />
-						</form>
-					</div>
-				</div>
-				<nav class="menu">
-					<a href="{% url 'category' 4 %}">СТАТЬИ</a>
-					<a href="/category/5/">АНАЛИТИКА</a>
-					<a href="/category/6/">КОММЕНТАРИИ</a>
-					<a href="/category/7/">ИНТЕРВЬЮ</a>
-					<a href="/category/8/">ОБЗОР ПРЕССЫ</a>
-					<a href="/category/9/">ВИДЕО</a>
-				</nav>
-				<div class="mobiMenu">
-					<div class="mobiMenuBut"></div>
-					<nav class="menuBox">
-						<a href="{% url 'category' 4 %}">Статьи</a>
-						<a href="#">Аналитика</a>
-						<a href="#">Комментарии</a>
-						<a href="#">Интервью</a>
-						<a href="#">Страница</a>
-						<a href="#">Пандухта</a>
-						<a href="#">Обзор прессы</a>
-						<a href="#">Актуальное ретро</a>
-						<a href="#">Трибуна Сагатела</a>
-						<a href="#">Видео</a>
-					</nav>
-				</div>
-			</div>
+		<header class="clearfix" id="header">	
+			
 		</header>	
 		<div class="main clearfix">
 		{% block main_left %}
@@ -318,13 +281,59 @@
 				<%= desc %>
 				<iframe width="580" height="315" src="//www.youtube.com/embed/<%= video %>" frameborder="0" allowfullscreen=""></iframe>
 			</article>
-		</script>		
+		</script>	
+
+
+		<script id="headerShow" type="text/template">
+			<div class="realHeader">
+				<div class="headerTop clearfix">
+					<div class="logo">
+						<a href="/">
+							<img src="{% static 'img/logo.png' %}">
+						</a>
+					</div>
+					<div class="searchBox clearfix">
+						<form action="/?l=am" method="get">
+							<input type="search" class="search" placeholder="поиск" name="s" value="" />
+							<input type="submit" value="" class="ssubmit" />
+						</form>
+					</div>
+				</div>
+				<nav class="menu">
+					<a href="{% url 'category' 4 %}">СТАТЬИ</a>
+					<a data-cat="5">АНАЛИТИКА</a>
+					<a data-cat="6">КОММЕНТАРИИ</a>
+					<a data-cat="7">ИНТЕРВЬЮ</a>
+					<a data-cat="8">ОБЗОР ПРЕССЫ</a>
+					<a data-cat="9">ВИДЕО</a>
+				</nav>
+				<div class="mobiMenu">
+					<div class="mobiMenuBut"></div>
+					<nav class="menuBox">
+						<a href="{% url 'category' 4 %}">Статьи</a>
+						<a href="#">Аналитика</a>
+						<a href="#">Комментарии</a>
+						<a href="#">Интервью</a>
+						<a href="#">Страница</a>
+						<a href="#">Пандухта</a>
+						<a href="#">Обзор прессы</a>
+						<a href="#">Актуальное ретро</a>
+						<a href="#">Трибуна Сагатела</a>
+						<a href="#">Видео</a>
+					</nav>
+				</div>
+			</div>
+		</script>	
+
+
+
         <script src="{% static "js/lib/jquery.min.js" %}"></script>
         <script src="{% static "js/lib/handlebars-v4.0.5.js" %}"></script>
         <script src="{% static "js/lib/underscore.js" %}"></script>
         <script src="{% static "js/lib/backbone.js" %}"></script>
 		<script src="{% static "js/models/content.js" %}"></script>
 		<script src="{% static "js/collections/contents.js" %}"></script>
+		<script src="{% static "js/views/header.js" %}"></script>
 		<script src="{% static "js/views/content.js" %}"></script>
 		<script src="{% static "js/views/contents.js" %}"></script>
         <script src="{% static "js/router.js" %}"></script>

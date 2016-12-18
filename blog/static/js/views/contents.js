@@ -14,7 +14,6 @@ app.ContentsView = Backbone.View.extend({
 		this.collection.each(function( item ) {
 			var contentView = new app.ContentView({ model: item	});
 			self.$el.append( contentView.render().el );
-			console.log(item);
 		});
 	},
 	

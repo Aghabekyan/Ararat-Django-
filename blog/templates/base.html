@@ -266,18 +266,21 @@
 			<a data-id="<%= id %>" class="mainNewsUnitLink">
 				<b><%= title %></b>
 				<span>
-					<img src="<%= img %>">
+					<img src="/media/<%= img %>">
 					<%= desc %>
 				</span>
 			</a>
 			<div class="mainNewsUnitFoot">
 				<span>Дата: <a><%= date %></a></span>
+				<span data-delete="<%= id %>" class="delete" style="float: right; font-weight: bold; color:red;">Delete</span>
+				<span data-read="<%= id %>" class="read" style="float: right; font-weight: bold; color:green;">Read</span>
 			</div>
 		</script>	
 		<script id="contentShow" type="text/template">
 			<article class="news">
 				<time><%= date %></time>
 				<h1><%= title %></h1>
+				<img style="width:100%" src="/media/<%= img %>">
 				<%= desc %>
 				<iframe width="580" height="315" src="//www.youtube.com/embed/<%= video %>" frameborder="0" allowfullscreen=""></iframe>
 			</article>

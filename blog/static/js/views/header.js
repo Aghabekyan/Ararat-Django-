@@ -16,7 +16,8 @@ app.HeaderView = Backbone.View.extend({
 
 	clickShow: function(e) {
 		var cat_id = $(e.currentTarget).data('cat');
-		var contents = new app.Contents();
+		// console.log(cat_id);
+		var contents = new app.Contents({cat_id: cat_id});
 		contents.fetch({
 		    success: function (collection) {
 				new app.ContentsView({collection:collection})

@@ -7,7 +7,11 @@ from blog.api.serializers import *
 class ContentViewSet(viewsets.ViewSet):
 
     def list(self, request):
-        queryset = Content.objects.order_by('-id').all()[:25]
+        try:
+            cat = request.GET['cat']
+            queryset = Content.objects.order_by('-id').filter(category=cat)[:25]
+        except:
+            queryset = Content.objects.order_by('-id').all()[:25]
         serializer = ContentSerializer(queryset, many=True)
         return Response(serializer.data)
 
@@ -15,3 +19,8 @@ class ContentViewSet(viewsets.ViewSet):
         queryset = Content.objects.get(pk=pk)
         serializer = ContentSerializer(queryset)
         return Response(serializer.data)
+
+    def destroy(self, request, pk=None):
+        queryset = Content.objects.get(pk=pk)
+        queryset.delete()
+        return Response('Deleted')

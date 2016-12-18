@@ -11,20 +11,72 @@ app.ContentView = Backbone.View.extend({
     },
 
 	events: {
-		"click .mainNewsUnitLink": "clickShow"
+		"click .read": "clickShow",
+		"click .delete": "deleteNews",
+		"dblclick .mainNewsUnitLink b": "dbclickEvent",		
+		"click .titleOk": "clickTitleOk"		
 	},
 
 	clickShow: function(e) {
-		var id = $(e.currentTarget).data('id');
+		var id = $(e.currentTarget).data('read');
 		var content = new app.Content({"id": id});
 		content.fetch({
 		    success: function (model) {
-		        console.log(model);
 		        var contentShowView = new app.ContentShowView({
 					model: model
 				});
 		    }
 		});
+	},
+
+	deleteNews: function(e) {
+		var id = $(e.currentTarget).data('delete');
+		var content = new app.Content({"id": id});
+		content.destroy({
+		    success: function (model) {
+		        // this.$el.addClass('active');
+		        console.log(e.currentTarget.closest( ".mainNewsUnit" ).remove());
+		    }
+		});
+	},
+
+	dbclickEvent: function(e) {
+		var htmlString = $( e.target ).html();
+		var id = $( e.target ).parent().data('id');
+		console.log(id);
+		$( e.target ).empty();
+		$('<input>').attr({
+		    type: 'text',
+		    class: 'foo',
+		    id: id,
+		    name: 'bar',
+		    value: htmlString,
+		}).appendTo($( e.target ));
+		$('<input>').attr({
+		    type: 'button',
+		    class: 'titleOk',
+		    id: id,
+		    value: 'OK',
+		}).appendTo($( e.target ));
+	},
+
+	clickTitleOk: function(e) {
+		var htmlString = $( e.target ).html();
+		var id = $( e.target ).parent().data('id');
+		$( e.target ).empty();
+		$('<input>').attr({
+		    type: 'text',
+		    class: 'foo',
+		    id: id,		    
+		    name: 'bar',
+		    value: htmlString
+		}).appendTo($( e.target ));
+		$('<input>').attr({
+		    type: 'button',
+		    class: 'titleOk',
+		    id: id,
+		    value: 'OK',
+		}).appendTo($( e.target ));
 	},
 
 	render: function() {

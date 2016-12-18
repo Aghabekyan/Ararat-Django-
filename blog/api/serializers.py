@@ -21,7 +21,7 @@ class ContentSerializer(serializers.ModelSerializer):
     img = serializers.CharField(required=False, allow_blank=True, max_length=100)
     video = serializers.CharField(required=False, allow_blank=True, max_length=100)
     general = serializers.BooleanField()
-    pub_date = serializers.DateTimeField()
+    date = serializers.DateTimeField(format='%d/%m/%Y %H:%M', source='pub_date')
     create_date = serializers.DateTimeField()
     user_id = serializers.IntegerField(read_only=True)
     category = CategorySerializer(many=True)
@@ -29,5 +29,5 @@ class ContentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Content
-        fields = ('id', 'title', 'desc', 'img', 'video', 'general', 'pub_date', 'create_date',
+        fields = ('id', 'title', 'desc', 'img', 'video', 'general', 'date', 'create_date',
                   'user_id', 'category')

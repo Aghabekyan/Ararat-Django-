@@ -3,7 +3,8 @@ from blog.api.views import ContentViewSet
 
 
 content_list = ContentViewSet.as_view({'get': 'list'})
-content_item = ContentViewSet.as_view({'get': 'retrieve'})
+content_item = ContentViewSet.as_view({'get': 'retrieve',
+                                       'delete': 'destroy'})
 
 urlpatterns = [
     url(r'^contents/$', content_list),
